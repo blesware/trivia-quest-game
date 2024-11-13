@@ -1,0 +1,84 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1vfxobkdniv8"]
+
+[ext_resource type="Theme" uid="uid://n3jiv5gm4oh" path="res://themes/trivia_quest_main_menu.tres" id="1_6dmvg"]
+[ext_resource type="FontFile" uid="uid://cvuni4wfi43gb" path="res://assets/fonts/GothicPixels.ttf" id="1_iec1p"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="2_h25e6"]
+[ext_resource type="Texture2D" uid="uid://chf5fftkvaeig" path="res://assets/ui/start_menu/background.png" id="3_i7nin"]
+[ext_resource type="FontFile" uid="uid://d3get1jykd02m" path="res://assets/fonts/Alkhemikal.ttf" id="3_wjp7e"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_6dmvg")
+script = ExtResource("2_h25e6")
+
+[node name="BackGroudTextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+texture = ExtResource("3_i7nin")
+
+[node name="MenuVBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.5
+offset_top = -121.0
+offset_right = 161.5
+offset_bottom = 121.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 19
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="MenuVBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 60
+theme_override_fonts/font = ExtResource("1_iec1p")
+theme_override_font_sizes/font_size = 150
+text = "Trivia Quest"
+
+[node name="PlayButton" type="Button" parent="MenuVBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_wjp7e")
+theme_override_font_sizes/font_size = 60
+text = "JUGAR"
+
+[node name="ExitButton" type="Button" parent="MenuVBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_wjp7e")
+theme_override_font_sizes/font_size = 60
+text = "SALIR"
+
+[node name="VersionBoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -124.0
+offset_top = -60.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="VersionBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VersionLabel" type="Label" parent="VersionBoxContainer/MarginContainer"]
+layout_mode = 2
+text = "v0.0.1"
+
+[connection signal="pressed" from="MenuVBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MenuVBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://n3jiv5gm4oh"]
+
+[ext_resource type="FontFile" uid="uid://d3get1jykd02m" path="res://assets/fonts/Alkhemikal.ttf" id="1_wdli1"]
+
+[resource]
+Label/font_sizes/font_size = 60
+Label/fonts/font = ExtResource("1_wdli1")
