@@ -1,0 +1,4 @@
+res://scenes/main_menu.tscn
+res://scripts/main_menu.gd
+res://default_bus_layout.tres
+res://scripts/AudioManager.gd
