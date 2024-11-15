@@ -83,13 +83,13 @@ theme_override_constants/margin_bottom = 20
 
 [node name="VersionLabel" type="Label" parent="VersionBoxContainer/MarginContainer"]
 layout_mode = 2
-text = "v0.0.1"
+text = "v0.0.2"
 
-[node name="Menu_sound" type="AudioStreamPlayer" parent="."]
+[node name="MenuSound" type="AudioStreamPlayer" parent="."]
 volume_db = -24.361
 bus = &"UI"
 
-[node name="Background_music" type="AudioStreamPlayer" parent="."]
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_1mumn")
 volume_db = -24.361
 autoplay = true

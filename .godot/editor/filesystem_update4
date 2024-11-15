@@ -1,4 +1,7 @@
 res://scenes/main_menu.tscn
+res://scripts/audio_manager.gd
 res://scripts/main_menu.gd
-res://default_bus_layout.tres
-res://scripts/AudioManager.gd
+res://scripts/trivia.gd
+res://scripts/trivia_parser.gd
+res://scripts/trivia_manager.gd
+res://scripts/json/trivias.json
