@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cpy2da641xfin"]
 
-[ext_resource type="Script" path="res://entities.gd" id="1_r5lol"]
+[ext_resource type="Script" path="res://scripts/entities.gd" id="1_r5lol"]
 
 [node name="Entities" type="Node2D"]
 script = ExtResource("1_r5lol")
@@ -12,7 +12,7 @@ wait_time = 5.0
 autostart = true
 
 [node name="AtrackTest" type="Button" parent="."]
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5

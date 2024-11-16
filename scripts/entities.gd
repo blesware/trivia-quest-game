@@ -1,3 +1,5 @@
+class_name Entities
+
 extends Node2D
 #declaramos variables exportables, estas NO se han usado todavia//
 @export var life : int
@@ -17,16 +19,17 @@ func _on_timer_timeout() -> float:
 #el accionar de un boton, en este caso llamado ATAQUE, con un label que imprimira si el ataque tiene critico, su total y el valor de la probabilidad
 #actual al momento de presionar el boton
 func _on_atrack_test_pressed():
+	var critico = randf_range(1.2,2)
 	#esta condicional funciona tomando en cuenta la funcion random_chanse creada mas abajo, si el valor devuelto es un booleano
 	#positivo, entonces se aplica el critico, de no ser asi, el critico no se toma en cuenta
 	if random_chance(crit_prob):
-		damage_total = damage * 2
-		$Label.text = str(damage_total) + "/ CRITICO / "  + str(crit_prob)
+		damage_total = damage * critico
+		$Label.text = str(damage_total) + "/ CRITICO / "  + str(critico)
 		print("Critico")
 		print(crit_prob)
 	else:
 		damage_total = damage
-		$Label.text = str(damage_total) + "/ NO CRITICO / " + str(crit_prob)
+		$Label.text = str(damage_total) + "/ NO CRITICO / " + str(critico)
 		print(damage_total)
 		print("No Critico")
 		print(crit_prob)
