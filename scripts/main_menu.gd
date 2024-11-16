@@ -1,6 +1,7 @@
 class_name MainMenu
 extends Control
 
+#creamos variables exportadas para asignar un sonido a los botones, el tipo de dato que reciben es AudioStream 
 @export var stream_click : AudioStream
 @export var stream_hover : AudioStream 
 
